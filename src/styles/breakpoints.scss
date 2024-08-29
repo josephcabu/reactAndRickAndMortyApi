@@ -1,0 +1,32 @@
+$s-small: 320px;
+$small: 440px;
+$s-medium: 570px;
+$medium: 768px;
+$large: 960px;
+$x-large: 1060px;
+$xx-large: 1250px;
+$xxx-large: 1440px;
+$high-quality: 1700px;
+
+// Mixin for media queries
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == s-small {
+        @media (max-width: #{$s-small}) { @content; }
+    } @else if $breakpoint == small {
+        @media (max-width: #{$small}) { @content; }
+    } @else if $breakpoint == s-medium {
+        @media (max-width: #{$s-medium}) { @content; }
+    } @else if $breakpoint == medium {
+        @media (max-width: #{$medium}) { @content; }
+    } @else if $breakpoint == large {
+        @media (max-width: #{$large}) { @content; }
+    } @else if $breakpoint == x-large {
+        @media (max-width: #{$x-large}) { @content; }
+    } @else if $breakpoint == xx-large {
+        @media (max-width: #{$xx-large}) { @content; }
+    } @else if $breakpoint == xxx-large {
+        @media (max-width: #{$xxx-large}) { @content; }
+    } @else if $breakpoint == high-quality {
+        @media (max-width: #{$high-quality}) { @content; }
+    }
+}
