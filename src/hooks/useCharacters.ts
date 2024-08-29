@@ -30,9 +30,9 @@ export const useCharacters = () => {
                 setCharacters(response.data.results);
             } catch (err: any) {
                 if (axios.isCancel(err)) {
-                    console.log('Petición cancelada por :', err.message); // Log if request is canceled
+                    console.log('Petición cancelada por :', err.message);
                 } else {
-                    setError(err.response?.data?.error || 'Fallo al obtener los personajes'); // More descriptive error message
+                    setError(err.response?.data?.error || 'Fallo al obtener los personajes');
                 }
             } finally {
               setLoading(false);

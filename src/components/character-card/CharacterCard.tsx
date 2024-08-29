@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+//Styles
 import './CharacterCard.css';
 
 interface CharacterCardProps {
